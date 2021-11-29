@@ -12,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
     buttonadd, buttonsub, buttoneql, buttonmul, buttondiv;
     TextView textView_result;
 
+//    float valueOne, valueTwo;
+//    boolean addition, subtraction, multiplication, division;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         buttondiv = (Button) findViewById(R.id.buttondiv);
         buttoneql = (Button) findViewById(R.id.buttoneql);
         textView_result = (TextView) findViewById(R.id.textView_result);
+
+        float valueOne, valueTwo;
+        boolean addition, subtraction, multiplication, division;
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +114,93 @@ public class MainActivity extends AppCompatActivity {
                 textView_result.setText(".");
             }
         });
+        buttonC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView_result.setText("");
+            }
+        });
+
+        // OnClickListeners for the buttons
+        buttonadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(textView_result == null){
+                    textView_result.setText("");
+                } else {
+                    valueOne = Float.parseFloat(textView_result.getText() + "");
+                    addition = true;
+                    textView_result.setText(null);
+                }
+            }
+        });
+
+        buttonsub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(textView_result == null){
+                    textView_result.setText(null);
+                } else {
+                    valueOne = Float.parseFloat(textView_result.getText() + "");
+                    subtraction = true;
+                    textView_result.setText(null);
+                }
+            }
+        });
+
+        buttondiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(textView_result == null){
+                    textView_result.setText(null);
+                } else {
+                    valueOne = Float.parseFloat(textView_result.getText() + "");
+                    division = true;
+                    textView_result.setText(null);
+                }
+            }
+        });
+
+        buttonmul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(textView_result == null){
+                    textView_result.setText(null);
+                } else {
+                    valueOne = Float.parseFloat(textView_result.getText() + "");
+                    multiplication = true;
+                    textView_result.setText(null);
+                }
+            }
+        });
+
+        buttoneql.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                valueTwo = Float.parseFloat(textView_result.getText() + "");
+
+                if(addition == true){
+                    textView_result.setText(valueOne + valueTwo + "");
+                    addition = false;
+                }
+
+                if(subtraction == true){
+                    textView_result.setText(valueOne - valueTwo + "");
+                    subtraction = false;
+                }
+
+                if(multiplication == true){
+                    textView_result.setText(valueOne * valueTwo + "");
+                    multiplication = false;
+                }
+
+                if(division == true){
+                    textView_result.setText(valueOne / valueTwo + "");
+                    division = false;
+                }
+            }
+        });
+
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
