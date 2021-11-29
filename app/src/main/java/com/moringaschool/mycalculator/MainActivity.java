@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity {
     buttonadd, buttonsub, buttoneql, buttonmul, buttondiv;
     TextView textView_result;
 
-//    float valueOne, valueTwo;
-//    boolean addition, subtraction, multiplication, division;
+    float valueOne, valueTwo;
+    boolean addition, subtraction, multiplication, division;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
         buttondiv = (Button) findViewById(R.id.buttondiv);
         buttoneql = (Button) findViewById(R.id.buttoneql);
         textView_result = (TextView) findViewById(R.id.textView_result);
-
-        float valueOne, valueTwo;
-        boolean addition, subtraction, multiplication, division;
 
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
