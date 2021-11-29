@@ -78,7 +78,25 @@ public class MainActivity extends AppCompatActivity {
                 textView_result.setText("6");
             }
         });
-        button1.setOnClickListener(new View.OnClickListener() {
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView_result.setText("7");
+            }
+        });
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView_result.setText("8");
+            }
+        });
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView_result.setText("9");
+            }
+        });
+        buttonPoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textView_result.setText("1");
@@ -87,31 +105,13 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textView_result.setText("1");
+                textView_result.setText(".");
             }
         });
-        button1.setOnClickListener(new View.OnClickListener() {
+        buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textView_result.setText("1");
-            }
-        });
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView_result.setText("1");
-            }
-        });
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView_result.setText("1");
-            }
-        });
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView_result.setText("1");
+                textView_result.setText("");
             }
         });
     }
